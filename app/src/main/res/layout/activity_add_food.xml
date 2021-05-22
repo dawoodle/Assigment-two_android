@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_image2"
+    android:id="@+id/addFood"
+    tools:context=".AddFoodActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/logo_image"/>
+
+
+    <EditText
+        android:id="@+id/editText_foodName"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/food_name"
+        android:drawableStart="@drawable/ic_baseline_fastfood_24"
+        android:layout_marginStart="20dp"
+        android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:id="@+id/editText_foodType"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:hint="@string/food_type"
+        android:layout_below="@+id/editText_foodName"
+        android:layout_marginStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_food_bank_24"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_baseline_food_bank_24" />
+
+
+    <EditText
+        android:id="@+id/editText_foodExpiry"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/editText_foodType"
+        android:hint="@string/datemonthyear"
+        android:layout_marginStart="20dp"
+        android:drawableStart="@drawable/ic_baseline_date_range_24"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/ic_baseline_date_range_24" />
+
+    <ImageButton
+        android:id="@+id/btn_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/editText_foodExpiry"
+        android:layout_marginTop="387dp"
+        android:background="@color/white"
+        app:srcCompat="@drawable/ic_baseline_edit_calendar_24"
+        android:layout_toRightOf="@+id/editText_foodExpiry" />
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/Red"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText_foodExpiry"
+        android:text="@string/add"
+        android:layout_marginStart="20dp" />
+
+
+
+
+</RelativeLayout>
+
+
+
