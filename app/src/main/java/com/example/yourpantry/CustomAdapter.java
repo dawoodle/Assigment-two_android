@@ -18,13 +18,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHodl
 
     private final Context context;
     Activity activity;
-    private final ArrayList<String> food_id, food_title, food_type, food_date;
+    private final ArrayList<String> food_title, food_type, food_date;
 
     CustomAdapter(Activity activity,Context context, ArrayList food_id, ArrayList food_title, ArrayList food_type,
                   ArrayList food_date){
         this.activity = activity;
         this.context = context;
-        this.food_id = food_id;
         this.food_title = food_title;
         this.food_type = food_type;
         this.food_date = food_date;
@@ -40,13 +39,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHodl
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHodler holder, int position) {
-        holder.food_id_txt.setText(String.valueOf(food_id.get(position)));
         holder.food_title_txt.setText(String.valueOf(food_title.get(position)));
         holder.food_type_txt.setText(String.valueOf(food_type.get(position)));
         holder.food_date_txt.setText(String.valueOf(food_date.get(position)));
         holder.mainLayout.setOnClickListener(v -> {
             Intent intent = new Intent(context, UpdateDeleteActivity.class);
-            intent.putExtra("id", String.valueOf(food_id.get(position)));
             intent.putExtra("title", String.valueOf(food_title.get(position)));
             intent.putExtra("type", String.valueOf(food_type.get(position)));
             intent.putExtra("date", String.valueOf(food_date.get(position)));
@@ -59,18 +56,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHodl
 
     @Override
     public int getItemCount() {
-        return food_id.size();
+        return food_title.size();
     }
 
    public static class MyViewHodler extends RecyclerView.ViewHolder {
 
-        TextView food_id_txt, food_title_txt, food_type_txt, food_date_txt;
+        TextView food_title_txt, food_type_txt, food_date_txt;
         LinearLayout mainLayout;
 
 
         MyViewHodler(@NonNull View itemView) {
             super(itemView);
-            food_id_txt = itemView.findViewById(R.id.food_id_txt);
             food_title_txt = itemView.findViewById(R.id.food_title_txt);
             food_type_txt = itemView.findViewById(R.id.food_type_txt);
             food_date_txt = itemView.findViewById(R.id.food_date_txt);

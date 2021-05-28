@@ -20,7 +20,7 @@ public class UpdateDeleteActivity extends AppCompatActivity implements DatePicke
 
     EditText foodName_input, foodType_input, foodExpiry_input;
     Button update_button, delete_button;
-    String id, title, type, date;
+    String title, type, date;
     ImageButton calender_button;
 
     @Override
@@ -49,7 +49,7 @@ public class UpdateDeleteActivity extends AppCompatActivity implements DatePicke
                 title = foodName_input.getText().toString().trim();
                 type = foodType_input.getText().toString().trim();
                 date = foodExpiry_input.getText().toString().trim();
-                myDB.updateData(id, title, type, date);
+                myDB.updateData(title, type, date);
             }
 
         });
@@ -69,10 +69,9 @@ public class UpdateDeleteActivity extends AppCompatActivity implements DatePicke
     }
 
     void getAndSetIntentData() {
-        if (getIntent().hasExtra("id") && getIntent().hasExtra("title") &&
+        if (getIntent().hasExtra("title") &&
                 getIntent().hasExtra("type") && getIntent().hasExtra("date")) {
 
-            id = getIntent().getStringExtra("id");
             title = getIntent().getStringExtra("title");
             type = getIntent().getStringExtra("type");
             date = getIntent().getStringExtra("date");
@@ -94,7 +93,7 @@ public class UpdateDeleteActivity extends AppCompatActivity implements DatePicke
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(UpdateDeleteActivity.this);
-                myDB.deleteOneRow(id);
+                myDB.deleteOneRow(title);
                 finish();
             }
         });
@@ -117,7 +116,8 @@ public class UpdateDeleteActivity extends AppCompatActivity implements DatePicke
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-        String date = dayOfMonth + "/" + month + "/" + year;
+        int newMonth = month + 1;
+        String date = dayOfMonth + "/" + newMonth + "/" + year;
         foodExpiry_input.setText(date);
     }
 }

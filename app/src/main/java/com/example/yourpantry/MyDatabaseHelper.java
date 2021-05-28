@@ -73,14 +73,14 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public void updateData(String row_id, String title, String type , String date){
+    public void updateData(String title, String type , String date){
         SQLiteDatabase db = this. getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(COLUMN_TITLE, title);
         cv.put(COLUMN_TYPE , type);
         cv.put(COLUMN_DATE, date);
 
-        long result = db.update(TABLE_NAME, cv, "_id=?", new String[]{row_id});
+        long result = db.update(TABLE_NAME, cv, "food_name=?", new String[]{title});
         if(result == -1){
             Toast.makeText(context,"failed to update", Toast.LENGTH_SHORT).show();
         }else{
@@ -90,7 +90,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public void  deleteOneRow(String row_id){
         SQLiteDatabase db = this. getWritableDatabase();
-        long result = db.delete(TABLE_NAME,"_id=?",new String[]{row_id});
+        long result = db.delete(TABLE_NAME,"food_name=?",new String[]{row_id});
         if(result == -1){
             Toast.makeText(context,"failed to delete", Toast.LENGTH_SHORT).show();
         }else{
