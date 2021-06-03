@@ -44,6 +44,7 @@ public class HomePageActivity extends AppCompatActivity {
         add_button.setOnClickListener(v -> {
             Intent intent = new Intent(HomePageActivity.this,AddFoodActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
         });
         recipe_button.setOnClickListener(new View.OnClickListener() {

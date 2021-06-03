@@ -53,6 +53,7 @@ public class AddFoodActivity extends AppCompatActivity implements DatePickerDial
             if (validate(FoodName, FoodType, FoodExpiry)) {
                 foodDetails = new FoodDetails(FoodName, FoodType, FoodExpiry);
                 startActivity(new Intent(AddFoodActivity.this,HomePageActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 myDB.addFood(foodName_input.getText().toString().trim(),
                         foodType_input.getText().toString().trim(),
                         foodExpiry_input.getText().toString().trim());
