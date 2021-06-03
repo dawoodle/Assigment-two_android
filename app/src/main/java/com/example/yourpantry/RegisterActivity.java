@@ -46,6 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
                     credentials = new Credentials(Username, Password, CnfPassword);
                     userDetails = new UserDetails(Firstname,Lastname);
                     startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     Toast.makeText(RegisterActivity.this,"Registration Successful", Toast.LENGTH_SHORT).show();
                 }
 
