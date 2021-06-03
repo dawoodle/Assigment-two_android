@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class HomePageActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    FloatingActionButton add_button;
+    FloatingActionButton add_button, recipe_button;
     ImageView no_food_image;
     TextView no_food;
 
@@ -38,12 +38,20 @@ public class HomePageActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.add_button);
+        recipe_button = findViewById(R.id.recipe_button);
         no_food_image = findViewById(R.id.no_food_image);
         no_food = findViewById(R.id.no_food);
         add_button.setOnClickListener(v -> {
             Intent intent = new Intent(HomePageActivity.this,AddFoodActivity.class);
             startActivity(intent);
 
+        });
+        recipe_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageActivity.this,WebviewActivity.class);
+                startActivity(intent);
+            }
         });
 
         myDB = new MyDatabaseHelper(HomePageActivity.this);

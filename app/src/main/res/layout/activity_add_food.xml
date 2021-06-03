@@ -51,7 +51,7 @@
         android:gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/editText_foodType"
-        android:hint="@string/datemonthyear"
+        android:hint="@string/expiry_date"
         android:layout_marginStart="20dp"
         android:drawableStart="@drawable/ic_baseline_date_range_24"
         android:layout_marginLeft="20dp"
@@ -80,6 +80,20 @@
         android:layout_below="@+id/editText_foodExpiry"
         android:text="@string/add"
         android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/btn_notify"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/Red"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/btn_add"
+        android:text="@string/notify_me"
+        android:layout_marginStart="20dp"
+        android:onClick="sendOnChannel1"/>
+
 
 
 

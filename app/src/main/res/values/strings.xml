@@ -22,9 +22,11 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="datemonthyear">Date/Month/Year</string>
-    <string name="deleteall">deleteall</string>
+    <string name="deleteall">Delete All</string>
     <string name="no_food">No Food</string>
-
+    <string name="notify_me">Notify Me</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="recipe_ideas">Recipe Ideas</string>
 
 
 </resources>
