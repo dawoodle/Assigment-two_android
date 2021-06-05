@@ -21,7 +21,7 @@ Requires installation of Android studio
 the application can be downloaded from:
 https://github.com/dawoodle/SD6501_Assignment-Final_2209848.git
 
-Application instruction manual
+Application instruction manual:
 1. Download the application from https://github.com/dawoodle/SD6501_Assignment-Final_2209848.git
 
 2. Press Register Text to create a new account. Requires 8 characters for password
@@ -56,7 +56,7 @@ left corner to navigate back to the homepage where it will display updated food 
 17. If you wish not to open the application but just view the expiry date just press ‘check expiry date’ and the application 
 will display the message on your phone of the food item’s expiry date. 
 
-Limitations
+Limitations:
 
 The Your Pantry mobile application built by student of class SD6501 at Weltec as a project. 
 The APK file is generated for release however the application is still currently in development 
