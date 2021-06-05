@@ -69,5 +69,7 @@ dawoodle@hotmail.com
 Acknowledgments:
 
 Wellington Institute of Technology
+
 Richa Panjabi SD6501 Lecture at Wellington Institute of Technology
+
 Android studio
