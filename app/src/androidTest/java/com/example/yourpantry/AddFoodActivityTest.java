@@ -46,17 +46,11 @@ public class AddFoodActivityTest {
         onView(withId(R.id.editText_foodType)).check(matches(isDisplayed()));
         onView(withId(R.id.editText_foodExpiry)).check(matches(isDisplayed()));
         onView(withId(R.id.btn_add)).check(matches(isDisplayed()));
-        onView(withId(R.id.btn_notify)).check(matches(isDisplayed()));
     }
 
     @Test
     public void calenderTest() {
         onView(withId(R.id.btn_calender)).perform(click());
-    }
-
-    @Test
-    public void NotificationTest(){
-        onView(withId(R.id.btn_notify)).perform(click());
     }
 
     @Test

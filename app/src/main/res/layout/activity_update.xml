@@ -59,11 +59,11 @@
         android:id="@+id/btn_calender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/editText_foodExpiry2"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="387dp"
         android:background="@color/white"
         app:srcCompat="@drawable/ic_baseline_edit_calendar_24"
-        android:layout_toRightOf="@+id/editText_foodExpiry" />
+        tools:ignore="UnknownIdInLayout" />
 
     <Button
         android:id="@+id/btn_update"
@@ -75,7 +75,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_below="@+id/editText_foodExpiry2"
-        android:text="@string/update"/>
+        android:text="@string/update"
+        android:layout_marginStart="20dp"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/btn_delete"
@@ -87,7 +89,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_below="@+id/btn_update"
-        android:text="@string/delete"/>
+        android:text="@string/delete"
+        android:layout_marginStart="20dp"
+        tools:targetApi="lollipop" />
 
 
 </RelativeLayout>
