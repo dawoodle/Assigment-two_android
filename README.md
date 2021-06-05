@@ -57,6 +57,7 @@ left corner to navigate back to the homepage where it will display updated food 
 will display the message on your phone of the food item’s expiry date. 
 
 Limitations
+
 The Your Pantry mobile application built by student of class SD6501 at Weltec as a project. 
 The APK file is generated for release however the application is still currently in development 
 and professional approval and not ready to be launched in the Google play store.
