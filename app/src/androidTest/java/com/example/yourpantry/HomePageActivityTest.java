@@ -34,7 +34,10 @@ public class HomePageActivityTest {
     }
 
     @Test
-    public void test_visibility_FabButton() { onView(withId(R.id.add_button)).check(matches(isDisplayed()));}
+    public void test_visibility_FabButtons() {
+        onView(withId(R.id.add_button)).check(matches(isDisplayed()));
+        onView(withId(R.id.recipe_button)).check(matches(isDisplayed()));
+    }
 
     @Test
     public void NavAddFoodActivity(){
@@ -44,6 +47,11 @@ public class HomePageActivityTest {
     @Test
     public void TestDeleteButton(){
         onView(withId(R.id.delete_all)).perform(click());
+    }
+
+    @Test
+    public void NavWebviewActivity(){
+        onView(withId(R.id.recipe_button)).perform(click());
     }
 
 }

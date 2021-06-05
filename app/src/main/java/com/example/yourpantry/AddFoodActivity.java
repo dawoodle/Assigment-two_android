@@ -115,5 +115,6 @@ public class AddFoodActivity extends AppCompatActivity implements DatePickerDial
                 .build();
 
         notificationManager.notify(1,notification);
+
     }
 }
