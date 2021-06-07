@@ -1,9 +1,11 @@
 # SD6501_Assignment-Final_2209848
 
 Project Title:
+
 Your Pantry mobile application
 
 Description:
+
 Your Pantry mobile application is intended to show the following functionalities. 
 First, the user can create and insert a list of the groceries and list its expiry date in the application. 
 Second, using the user's list, the application can update and delete the food item. 
@@ -12,8 +14,11 @@ to manage the freshness of their grocery to prevent food waste from coming out f
 
 Dependencies:
 Android Studio
+
 Google Play
+
 Mobile device supports Android application
+
 Desktop computer or laptop with Windows 10 operating system
 
 Installing:
