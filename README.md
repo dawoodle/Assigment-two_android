@@ -13,6 +13,7 @@ Lastly, using the expiry date application will send a notification to the user's
 to manage the freshness of their grocery to prevent food waste from coming out from their pantry. 
 
 Dependencies:
+
 Android Studio
 
 Google Play
@@ -22,11 +23,14 @@ Mobile device supports Android application
 Desktop computer or laptop with Windows 10 operating system
 
 Installing:
+
 Requires installation of Android studio 
+
 the application can be downloaded from:
 https://github.com/dawoodle/SD6501_Assignment-Final_2209848.git
 
 Application instruction manual:
+
 1. Download the application from https://github.com/dawoodle/SD6501_Assignment-Final_2209848.git
 
 2. Press Register Text to create a new account. Requires 8 characters for password
